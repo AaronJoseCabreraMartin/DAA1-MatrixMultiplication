@@ -3,6 +3,7 @@
 #include <vector>
 #include <iostream>
 
+#include "matrixcalculatorexception.hpp"
 #include "operation.hpp"
 #include "multiply.hpp"
 #include "matrix.hpp"

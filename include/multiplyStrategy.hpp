@@ -2,6 +2,8 @@
 #include <vector>
 
 #include "matrix.hpp"
+#include "matrixcalculatorexception.hpp"
+
 
 class multiplyStrategy{
     public:

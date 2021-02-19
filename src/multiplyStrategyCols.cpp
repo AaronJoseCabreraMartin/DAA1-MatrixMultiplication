@@ -3,8 +3,7 @@
 Matrix multiplyStrategyCols::multiply(const Matrix& A, const Matrix& B)const{
     Matrix result;
     if (A.size() == 0 || B.size() == 0 || A[0].size() == 0 || B[0].size() == 0){
-        std::cout << "Alguna de las matrices está vacía" << std::endl;
-        return result;
+        throw emptyMatrix();
     }
     Matrix Btransposed = transpose(B);
     // NxM MxO = NxO
@@ -20,7 +19,7 @@ Matrix multiplyStrategyCols::multiply(const Matrix& A, const Matrix& B)const{
             }
         }
     }else{
-        std::cout << "Matrices incompatibles" << std::endl;
+        throw incompatibleMatrix();
     }
     return result;
 }

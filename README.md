@@ -29,4 +29,4 @@ Primero ha de compilar el programa, para esto utilice:
 
 - Ejecute con `./bin/matrixCalculator`
 
-También pude compilar en modo _debug_ con `make debug`
+También pude compilar en modo _debug_ con `make debug`, una compilación algo más rápida para agilizar las pruebas pero una ejecución más lenta. Con el make "normal" optimiza el código, haciendo una compilación más lenta pero una ejecución sustancialmente más rápida. 

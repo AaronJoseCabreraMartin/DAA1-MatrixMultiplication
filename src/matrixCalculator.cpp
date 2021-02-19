@@ -16,6 +16,8 @@ void MatrixCalculator::setOperation(Operation* operation){
     // si el puntero no es nulo
     if ( operation ){
         operation_ = operation;
+    }else{
+        throw emptyOperator();
     }
 }
 
@@ -24,8 +26,7 @@ Matrix MatrixCalculator::operate(const Matrix& A, const Matrix& B){
     if ( operation_ ){
         return operation_->apply(A,B);
     }
-    std::cout << "Error, eliga operacion" << std::endl;
-    return std::vector<std::vector<int>>();
+    throw noOperatorSelected();
 }
 
 

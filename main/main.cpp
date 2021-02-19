@@ -33,30 +33,69 @@ int main(void){
     showMatrix(D);
 
     MatrixCalculator myMatrixCalculator;
-    myMatrixCalculator.setOperation(new Multiply(new multiplyStrategyCols));
+
+    try{
+        myMatrixCalculator.setOperation(new Multiply(new multiplyStrategyCols));
+    }catch(const std::exception& e){
+        std::cerr << e.what() << '\n';
+    }
+    
     std::cout << std::endl << "***** Strategy Cols! *****" << std::endl;
 
     std::cout << std::endl << "AxB" << std::endl;
-    showMatrix(myMatrixCalculator.operate(A,B));
+    try{
+        showMatrix(myMatrixCalculator.operate(A,B));
+    }catch(const std::exception& e){
+        std::cerr << e.what() << '\n';
+    }
+    
     
     std::cout << std::endl << "AxC" << std::endl;
-    showMatrix(myMatrixCalculator.operate(A,C));
-
+    try{
+        showMatrix(myMatrixCalculator.operate(A,C));
+    }catch(const std::exception& e){
+        std::cerr << e.what() << '\n';
+    }
+    
     std::cout << std::endl << "AxD" << std::endl;
-    showMatrix(myMatrixCalculator.operate(A,D));
-
+    try{
+        showMatrix(myMatrixCalculator.operate(A,D));
+    }catch(const std::exception& e){
+        std::cerr << e.what() << '\n';
+    }
+    
     // Change the Strategy
-    myMatrixCalculator.setOperation(new Multiply(new multiplyStrategyRows));
+    try{
+        myMatrixCalculator.setOperation(new Multiply(new multiplyStrategyRows));
+    }catch(const std::exception& e){
+        std::cerr << e.what() << '\n';
+    }
+    
     std::cout << std::endl << "***** Strategy Rows! *****" << std::endl;
 
     std::cout << std::endl << "AxB" << std::endl;
-    showMatrix(myMatrixCalculator.operate(A,B));
+    try{
+        showMatrix(myMatrixCalculator.operate(A,B));
+    }catch(const std::exception& e){
+        std::cerr << e.what() << '\n';
+    }
+    
     
     std::cout << std::endl << "AxC" << std::endl;
-    showMatrix(myMatrixCalculator.operate(A,C));
+    try{
+        showMatrix(myMatrixCalculator.operate(A,C));
+    }catch(const std::exception& e){
+        std::cerr << e.what() << '\n';
+    }
+    
 
     std::cout << std::endl << "AxD" << std::endl;
-    showMatrix(myMatrixCalculator.operate(A,D));
+    try{
+        showMatrix(myMatrixCalculator.operate(A,D));
+    }catch(const std::exception& e){
+        std::cerr << e.what() << '\n';
+    }
+    
     /*Matrix A,B;
     int contador = 0, tamanio = 1600;
     std::cin >> tamanio;
@@ -76,7 +115,7 @@ int main(void){
     std::cout << std::endl << "AxB" << std::endl;
     time_t inicio = time(NULL);
     MatrixCalculator myMatrixCalculator;
-    myMatrixCalculator.setOperation(new Multiply(new multiplyStrategyCols));
+    myMatrixCalculator.setOperation(new Multiply(new multiplyStrategyRows));
     myMatrixCalculator.operate(A,B);
     time_t fin = time(NULL);
     std::cout << "Listo en " << fin - inicio << " segundos" << std::endl;*/

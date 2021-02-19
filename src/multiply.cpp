@@ -6,7 +6,7 @@ Multiply::Multiply(multiplyStrategy* strategy){
         strategy_ = strategy;
     }else{
         strategy_ = NULL;
-        std::cout << "Error, eliga una estrategia" << std::endl;
+        throw noMultiplyStrategySelected();
     }
 }
 
@@ -22,8 +22,6 @@ Matrix Multiply::apply(const Matrix& A, const Matrix& B){
     if (strategy_){
         return strategy_->multiply(A,B);
     }else{
-        std::cout << "Error, eliga una estrategia" << std::endl;
-        Matrix result;
-        return result;
+        throw noMultiplyStrategySelected();
     }
 }
