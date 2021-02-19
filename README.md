@@ -10,3 +10,9 @@ Son una serie de reglas o recomendaciones que facilitan la creación de clases b
 **¿En qué consiste el principio de responsabilidad única?**
 El principio de responsabilidad única dicta que una clase debería ser encargada de realizar una única responsabilidad, una única tarea importante. Si utilizáramos bien este principio, nuestras clases cuando tuvieran que cambiar, lo harían sólo por un único motivo (y no por varios).  
 Si observamos que una clase adquiere unas dimensiones muy grandes o que tiene una complejidad elevada, puede ser señal de que esa clase debería dividirse en 2 o más clases.
+
+
+
+Para el diseño de clases he utilizado el siguiente diagrama UML:
+
+![uml](/capturas/uml.PNG)
