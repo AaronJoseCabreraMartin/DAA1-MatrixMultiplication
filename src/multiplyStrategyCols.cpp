@@ -12,7 +12,7 @@ Matrix multiplyStrategyCols::multiply(const Matrix& A, const Matrix& B)const{
         result.resize(A.size());
         for (size_t i = 0; i < result.size(); i++){
             result[i].resize(Btransposed[0].size());
-            for (size_t j = 0; j < result.size(); j++){
+            for (size_t j = 0; j < result[i].size(); j++){
                 result[i][j] = 0;
                 for (size_t k = 0; k < Btransposed.size(); k++){
                     result[i][j] += A[i][k]*Btransposed[k][j];

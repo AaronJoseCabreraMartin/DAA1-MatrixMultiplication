@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <stdlib.h>     /* srand, rand */
+#include <time.h>       /* time */
 
 #include "../include/matrixcalculator.hpp"
 
@@ -55,5 +57,28 @@ int main(void){
 
     std::cout << std::endl << "AxD" << std::endl;
     showMatrix(myMatrixCalculator.operate(A,D));
+    /*Matrix A,B;
+    int contador = 0, tamanio = 1600;
+    std::cin >> tamanio;
+    A.resize(tamanio);
+    B.resize(tamanio);
+    srand(time(NULL));
+    for (size_t i = 0; i < tamanio; i++){
+        A[i].resize(tamanio);
+        B[i].resize(tamanio);
+        for (size_t j = 0; j < tamanio; j++){
+            A[i][j] = rand()%90+10;
+            B[i][j] = rand()%90+10;
+        }
+    }
+    
+    
+    std::cout << std::endl << "AxB" << std::endl;
+    time_t inicio = time(NULL);
+    MatrixCalculator myMatrixCalculator;
+    myMatrixCalculator.setOperation(new Multiply(new multiplyStrategyCols));
+    myMatrixCalculator.operate(A,B);
+    time_t fin = time(NULL);
+    std::cout << "Listo en " << fin - inicio << " segundos" << std::endl;*/
     return 0;
 }
