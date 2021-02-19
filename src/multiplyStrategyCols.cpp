@@ -7,7 +7,6 @@ Matrix multiplyStrategyCols::multiply(const Matrix& A, const Matrix& B)const{
         return result;
     }
     Matrix Btransposed = transpose(B);
-    
     // NxM MxO = NxO
     if (  A[0].size() == Btransposed.size()){
         result.resize(A.size());
@@ -29,7 +28,7 @@ Matrix multiplyStrategyCols::multiply(const Matrix& A, const Matrix& B)const{
 Matrix multiplyStrategyCols::transpose(const Matrix& originalMatrix)const{
     Matrix result;
     result.resize(originalMatrix[0].size());
-    for (size_t i = 0; i < originalMatrix.size(); i++){
+    for (size_t i = 0; i < originalMatrix[0].size(); i++){
         result[i].resize(originalMatrix.size());
     }
     for (size_t i = 0; i < originalMatrix.size(); i++){

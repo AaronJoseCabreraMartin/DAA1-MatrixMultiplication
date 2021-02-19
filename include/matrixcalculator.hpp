@@ -12,7 +12,7 @@ class MatrixCalculator{
         Operation* operation_;
     public:
         MatrixCalculator();
-        ~MatrixCalculator(){}
+        ~MatrixCalculator();
 
         void setOperation(Operation*);
 
